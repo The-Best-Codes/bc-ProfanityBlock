@@ -1,7 +1,7 @@
 # bc-ProfanityBlock
 Profanity blocking JS script.
 
-![image](https://github.com/The-Best-Codes/bc-ProfanityBlock/assets/106822363/be4a2b9e-22bf-4173-9c54-7ac8456dd257)
+<img src="https://github.com/The-Best-Codes/bc-ProfanityBlock/assets/106822363/be4a2b9e-22bf-4173-9c54-7ac8456dd257" alt="icon" for="cover" />
 
 
 # Functions
