@@ -1,8 +1,8 @@
 # bc-ProfanityBlock
+
 Profanity blocking JS script.
 
 <img src="https://github.com/The-Best-Codes/bc-ProfanityBlock/assets/106822363/be4a2b9e-22bf-4173-9c54-7ac8456dd257" alt="icon" for="cover" width=320 />
-
 
 # Functions
 
@@ -13,7 +13,7 @@ A JavaScript class that provides methods for filtering and cleaning text to bloc
 ### Constructor
 
 ```javascript
-constructor()
+constructor();
 ```
 
 - Initializes an instance of the `ContentFilterBadWord` class.
@@ -91,6 +91,7 @@ cleanText(
   - The cleaned text.
 
 # Usage
+
 ## Usage Examples
 
 Assuming `Cat`, `Dog`, and `Mountain` are bad words.
@@ -165,6 +166,6 @@ console.log(containsBadWords);
 
 In this example, we check if the given text contains any bad words without evasion separators using the `containsBadWords` method with the `detectEvasionSeperators` parameter set to `true`. The output is `true` because the text contains the words "cat" and "dog" without any separators.
 
-
 # About
+
 This library is developed and maintained by [BestCodes](https://the-best-codes.github.io?github_profanityblock_repo). Contact the owner via best-codes@proton.me for more information.

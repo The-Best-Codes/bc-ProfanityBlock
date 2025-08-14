@@ -436,11 +436,11 @@ class ContentFilterBadWord {
     text,
     matchWord = false,
     detectEvasionCharacters = true,
-    detectEvasionSeperators = true
+    detectEvasionSeperators = true,
   ) {
     // Decode bad words for comparison
     const cussWords = this.encodedCussWords.map((encodedWord) =>
-      this.decodeBase64(encodedWord)
+      this.decodeBase64(encodedWord),
     );
 
     // Normalize text to catch evasion attempts
@@ -458,10 +458,15 @@ class ContentFilterBadWord {
       // Remove spaces between letters only for bad words
       cussWords.forEach((cussWord) => {
         // Create a dynamic regular expression that matches the bad word with any spaces between the letters
-        let wordRegex = new RegExp((cussWord.replace(/\s+/g, '')).split("").join("\\s*"), "gi");
+        let wordRegex = new RegExp(
+          cussWord.replace(/\s+/g, "").split("").join("\\s*"),
+          "gi",
+        );
         // Replace the matched substring with the bad word without spaces
         normalizedText = normalizedText.replace(wordRegex, (match) => {
-          return match.replace(/\s/g, "").replace(cussWord.replace(/\s+/g, ''), cussWord);
+          return match
+            .replace(/\s/g, "")
+            .replace(cussWord.replace(/\s+/g, ""), cussWord);
         });
       });
     }
@@ -487,7 +492,7 @@ class ContentFilterBadWord {
     text,
     method = "replace",
     detectEvasionCharacters = true,
-    detectEvasionSeparators = true
+    detectEvasionSeparators = true,
   ) {
     let cleanedText = text;
 
